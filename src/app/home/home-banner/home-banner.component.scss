@@ -1,0 +1,28 @@
+.banner {
+  background-image: url("../../../assets/images/crypto.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: grey;
+  padding: 30px;
+
+  .banner-text {
+    display: inline-block;
+
+    h1 {
+      font-size: 48px;
+      letter-spacing: 3px;
+    }
+
+    h3 {
+      float: right;
+    }
+  }
+
+  .scroller {
+    height: 50%;
+    display: flex;
+  }
+}
