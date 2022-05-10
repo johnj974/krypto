@@ -6,7 +6,11 @@
     </div>
     <div class="scroller">
       <marquee behavior="scroll" direction="left" loop="infinite">
-        testing
+        <div class="coin-display">
+          <div class="card" *ngFor="let coin of topCoins">
+            <p>{{ coin.id }}</p>
+          </div>
+        </div>
       </marquee>
     </div>
   </div>
