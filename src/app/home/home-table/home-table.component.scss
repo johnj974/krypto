@@ -1,0 +1,39 @@
+section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 25%;
+}
+
+.img-column {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 40px;
+  }
+  span {
+    margin-left: 10px;
+    width: 60%;
+  }
+}
+
+.positive {
+  color: green;
+}
+
+.negative {
+  color: red;
+}
