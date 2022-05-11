@@ -8,7 +8,18 @@
       <marquee behavior="scroll" direction="left" loop="infinite">
         <div class="coin-display">
           <div class="card" *ngFor="let coin of topCoins">
-            <p>{{ coin.id }}</p>
+            <img src="{{ coin.image }}" alt="" />
+            <p>
+              {{ coin.name }}
+            </p>
+            <p>{{ coin.current_price | currency: "EUR" }}</p>
+            <p
+              [ngClass]="
+                coin.price_change_percentage_24h > 0 ? 'positive' : 'negative'
+              "
+            >
+              {{ coin.price_change_percentage_24h }}
+            </p>
           </div>
         </div>
       </marquee>

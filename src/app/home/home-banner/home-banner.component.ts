@@ -13,9 +13,14 @@ export class HomeBannerComponent implements OnInit {
   constructor(private coinService: CoinService) {}
 
   ngOnInit(): void {
-    this.coinService.getTrendingCoins().subscribe((data) => {
-      this.topCoins = data;
-      console.log(this.topCoins);
-    });
+    this.coinService.getTrendingCoins().subscribe(
+      (data) => {
+        this.topCoins = data;
+        console.log(this.topCoins);
+      },
+      (error) => {
+        console.log(error);
+      }
+    );
   }
 }
