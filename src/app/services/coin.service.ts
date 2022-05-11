@@ -20,6 +20,12 @@ export class CoinService {
     );
   }
 
+  getSingleCoin(id: string) {
+    return this.http.get<CoinInterface>(
+      `https://api.coingecko.com/api/v3/coins/${id}`
+    );
+  }
+
   //TOP 7 TRENDING COINS
   // getTrendingCoins() {
   //   return this.http.get<CoinInterface>(

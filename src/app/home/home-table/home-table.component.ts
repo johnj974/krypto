@@ -5,6 +5,7 @@ import { CoinService } from 'src/app/services/coin.service';
 import { AfterViewInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-table',
@@ -17,11 +18,17 @@ export class HomeTableComponent implements OnInit {
   displayedColumns = [
     'name',
     'current_price',
+    'high_24h',
+    'low_24h',
     'price_change_percentage_24h',
-    'market_cap',
   ];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
+
+  toCoinDetails(row: CoinInterface) {
+    console.log(row);
+    this.router.navigate(['coin', row.id]);
+  }
 
   applyFilter(e: Event) {
     const filterValue = (e.target as HTMLInputElement).value;
@@ -32,7 +39,7 @@ export class HomeTableComponent implements OnInit {
     }
   }
 
-  constructor(private coinService: CoinService) {}
+  constructor(private coinService: CoinService, private router: Router) {}
 
   ngOnInit(): void {
     this.coinService.getAllCoins().subscribe((data: CoinInterface[]) => {
