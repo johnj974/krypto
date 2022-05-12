@@ -1,1 +1,4 @@
-<p>coin-display works!</p>
+<img src="{{ selectedCoin?.image?.large }}" alt="" />
+<h1>{{ selectedCoin?.name }}</h1>
+<p innerHtml="{{ selectedCoin?.description?.en }}"></p>
+<p>Rank: {{ selectedCoin?.coingecko_rank }}</p>

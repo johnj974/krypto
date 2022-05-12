@@ -10,7 +10,7 @@ import { CoinService } from 'src/app/services/coin.service';
 })
 export class CoinDisplayComponent implements OnInit {
   //.
-  selectedCoin: CoinInterface;
+  selectedCoin;
   constructor(
     private route: ActivatedRoute,
     private coinService: CoinService
