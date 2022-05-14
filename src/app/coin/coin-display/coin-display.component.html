@@ -1,4 +1,34 @@
-<img src="{{ selectedCoin?.image?.large }}" alt="" />
-<h1>{{ selectedCoin?.name }}</h1>
-<p innerHtml="{{ selectedCoin?.description?.en }}"></p>
-<p>Rank: {{ selectedCoin?.coingecko_rank }}</p>
+<div class="container">
+  <div class="row">
+    <div class="col-image">
+      <div class="flip-box">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <img src="{{ selectedCoin?.image?.large }}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-info">
+      <h1>{{ selectedCoin?.name }}</h1>
+
+      <p>Rank: {{ selectedCoin?.coingecko_rank }}</p>
+      <p>Market Cap Rank: {{ selectedCoin?.market_cap_rank }}</p>
+      <p>
+        Current Price:
+        {{ selectedCoin?.market_data.current_price.eur | currency: "EUR" }}
+      </p>
+      <p>
+        24H High:
+        {{ selectedCoin?.market_data.high_24h.eur | currency: "EUR" }}
+      </p>
+      <p>
+        24H Low:
+        {{ selectedCoin?.market_data.low_24h.eur | currency: "EUR" }}
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <p innerHtml="{{ selectedCoin?.description?.en }}"></p>
+  </div>
+</div>
