@@ -1,10 +1,12 @@
 <mat-toolbar>
-  <span>Currency Checker</span>
-  <span class="example-spacer"></span>
+  <span><a routerLink="">Currency Checker</a></span>
+  <!-- <span class="example-spacer"></span>
   <mat-form-field>
     <mat-select (valueChange)="sendSelected($event)" class="text-sm" [(ngModel)]="selectedOption">
       <mat-option selected value="eur">Euro</mat-option>
       <mat-option value="usd">US Dollar</mat-option>
     </mat-select>
-  </mat-form-field>
+  </mat-form-field> -->
+  <span class="example-spacer"></span>
+  <span>{{ date }} </span>
 </mat-toolbar>

@@ -13,7 +13,6 @@
       <h1>{{ selectedCoin?.name }}</h1>
 
       <p>Rank: {{ selectedCoin?.coingecko_rank }}</p>
-      <p>Market Cap Rank: {{ selectedCoin?.market_cap_rank }}</p>
       <p>
         Current Price:
         {{ selectedCoin?.market_data.current_price.eur | currency: "EUR" }}
@@ -25,6 +24,15 @@
       <p>
         24H Low:
         {{ selectedCoin?.market_data.low_24h.eur | currency: "EUR" }}
+      </p>
+      <p>
+        Market Cap:
+        {{ selectedCoin?.market_data.market_cap.eur | currency: "EUR" }}
+      </p>
+      <p>Market Cap Rank: {{ selectedCoin?.market_cap_rank }}</p>
+      <p>
+        Max Supply:
+        {{ selectedCoin?.market_data.total_supply }}
       </p>
     </div>
   </div>
