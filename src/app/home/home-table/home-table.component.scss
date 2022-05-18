@@ -46,3 +46,9 @@ tr {
 .negative {
   color: red;
 }
+
+@media screen and (max-width: 991px) {
+  .shrink {
+    display: none;
+  }
+}
