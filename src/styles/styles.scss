@@ -36,17 +36,22 @@ $krypto-theme: mat-light-theme(
 
 /* You can add global styles to this file, and also import other style files */
 
+@import "../styles/shared/colors";
+
 html,
 body {
   height: 100%;
-  background-color: rgb(32, 31, 31);
+  background-color: $dark-background;
 }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.mat-toolbar {
-  background-color: indigo;
-  height: 100px;
+a {
+  color: $green-anchor;
+}
+
+a:hover {
+  color: $green-anchor-hover;
 }

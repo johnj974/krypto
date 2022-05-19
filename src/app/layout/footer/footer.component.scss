@@ -1,5 +1,7 @@
+@import "../../../styles/shared/colors";
+
 footer {
-  background-color: indigo;
+  background-color: $indigo-banner;
   text-align: center;
   height: 100px;
   display: flex;
@@ -8,7 +10,7 @@ footer {
   margin-top: 40px;
 
   p {
-    color: white;
+    color: $white-text;
     margin: 0;
   }
 }

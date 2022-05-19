@@ -1,11 +1,13 @@
+@import "../../../styles/shared/colors";
+
 .banner {
   background-image: url("../../../assets/images/crypto.jpg");
-  background-color: black;
+  background-color: $dark-background;
   height: 500px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
+  color: $white-text;
   padding: 30px;
 
   .banner-text {
@@ -42,9 +44,9 @@
 }
 
 .positive {
-  color: green;
+  color: $green-positive;
 }
 
 .negative {
-  color: red;
+  color: $red-negative;
 }
