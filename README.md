@@ -1,27 +1,23 @@
 # Krypto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
+A site which displays Crypto Currency current values
 
-## Development server
+## Desktop view
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<img src="src/assets/images/bitcoin-display-desktop.png">
+<img src="src/assets/images/bitcoin-home-desktop.png">
 
-## Code scaffolding
+## Mobile view
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<img align="left"  height="500px" src="src/assets/images/bitcoin-display-mobile.png">
+<img  height="500px" src="src/assets/images/bitcoin-home-mobile.png">
 
-## Build
+## Technology Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [Angular CLI](https://github.com/angular/angular-cli) version 11.2.3.
+- [Angular Material](https://material.angular.io/)
+- [Typescript](https://www.typescriptlang.org/)
+- HTML
+- SCSS
+- [Github](https://github.com/)
+- [CoinGecko](https://www.coingecko.com/)

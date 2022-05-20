@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { HomeHomeComponent } from './home/home-home/home-home.component';
 
 const routes: Routes = [
   {
@@ -10,10 +11,17 @@ const routes: Routes = [
     path: 'coin/:id',
     loadChildren: () => import('./coin/coin.module').then((m) => m.CoinModule),
   },
+  {
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

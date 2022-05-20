@@ -1,6 +1,13 @@
+@import "../../../styles/shared/colors";
+
 section {
   width: 90%;
   margin: 0 auto;
+}
+
+::placeholder {
+  color: $green-anchor;
+  opacity: 1;
 }
 
 table {
@@ -10,11 +17,11 @@ table {
 mat-form-field {
   font-size: 14px;
   width: 100%;
-  color: white;
+  color: $white-text;
 }
 
 mat-label {
-  color: white;
+  color: $white-text;
 }
 
 td,
@@ -40,11 +47,11 @@ tr {
 }
 
 .positive {
-  color: green;
+  color: $green-positive;
 }
 
 .negative {
-  color: red;
+  color: $red-negative;
 }
 
 @media screen and (max-width: 991px) {
