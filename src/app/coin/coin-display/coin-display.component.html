@@ -43,8 +43,11 @@
         Market Cap Rank: <span>{{ selectedCoin?.market_cap_rank }}</span>
       </p>
       <p>
-        Max Supply:
-        <span>{{ selectedCoin?.market_data.total_supply }}</span>
+        <!-- Max Supply:
+        <span>{{ selectedCoin?.market_data.total_supply }}</span> -->
+        <button mat-raised-button color="primary" (click)="toGraph()">
+          to graph
+        </button>
       </p>
     </div>
   </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { CoinInterface } from 'src/app/models/coin.interface';
 import { CoinService } from 'src/app/services/coin.service';
 
@@ -13,8 +13,14 @@ export class CoinDisplayComponent implements OnInit {
   selectedCoin;
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private coinService: CoinService
   ) {}
+
+  toGraph() {
+    console.log('working');
+    this.router.navigate(['graph', this.selectedCoin.id]);
+  }
 
   ngOnInit(): void {
     this.route.params.subscribe((data: Params) => {

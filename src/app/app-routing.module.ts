@@ -12,6 +12,12 @@ const routes: Routes = [
     loadChildren: () => import('./coin/coin.module').then((m) => m.CoinModule),
   },
   {
+    path: 'graph/:id',
+    loadChildren: () =>
+      import('./graph/graph.module').then((m) => m.GraphModule),
+  },
+
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full',
